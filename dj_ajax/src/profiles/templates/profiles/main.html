@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block scripts %}
+    <script src="{% static 'profiles/main.js' %}" defer></script>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+{% endblock scripts %}
+
+{% block title %}
+my profile
+{% endblock title %}
+
+{% block content %}
+my profile
+{% endblock content %}
