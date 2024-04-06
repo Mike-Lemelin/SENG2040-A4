@@ -4,6 +4,8 @@
 
 {% block scripts %}
     <script src="{% static 'posts/main.js' %}" defer></script>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 {% endblock scripts %}
 
 {% block title %}
@@ -26,6 +28,12 @@ posts
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">close</button>
                             <button type="submit" class="btn btn-success">+ add</button>
+                        </div>
+                    </form>
+                    <form action="/upload" class="dropzone dz">
+                        {% csrf_token %}
+                        <div class="fallback">
+                            <input name="file" type="file" multiple />
                         </div>
                     </form>
                 </div>
